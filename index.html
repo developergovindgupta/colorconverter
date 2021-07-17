@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			html {
+				width: 100vw;
+				height: 100vh;
+			}
+			body {
+			}
+			.container {
+				width: 800px;
+				height: 100%;
+				margin: 50px auto;
+				border: solid 1px;
+			}
+			.container .row {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 10px;
+				padding: 10px;
+				border: solid 1px;
+			}
+			.container .row > div {
+				width: 100%;
+			}
+			.container .row .cell {
+				width: 50%;
+				padding: 10px;
+			}
+			table {
+				border: double;
+				border-spacing: 0;
+				box-shadow: 2px 2px 5px black;
+				width: 300px;
+			}
+			tr {
+				border: double;
+			}
+			th {
+				background-color: rgba(0, 0, 0, 0.3);
+				padding: 4px 10px;
+				border: solid 1px;
+			}
+			td {
+				padding: 2px 10px;
+				border: solid 1px;
+			}
+			a {
+				cursor: pointer;
+				padding: 10px;
+				display: inline-block;
+
+				font-size: 20px;
+			}
+			ol {
+				padding-left: 20px;
+				margin-right: 20px;
+			}
+			ol li {
+				background-color: rgba(0, 0, 0, 0.2);
+				border-radius: 5px;
+				margin: 5px;
+				padding: 10px;
+			}
+			ol li b {
+				font-size: 20px;
+				padding: 10px;
+				display: block;
+			}
+			ol li i {
+				padding-left: 30px;
+			}
+			@media screen and (max-width: 800px) {
+				.container {
+					width: 100%;
+				}
+				.container .row .cell {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h1>ColorConverter.toColor()</h1>
+			</div>
+			<div class="row">
+				<div class="cell">
+					Enter Color
+					<input type="text" class="input-text-color" value="rgba(255,255,255,1)" />
+				</div>
+				<div class="cell">
+					<div class="text-color-output"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					Select Color :
+					<input type="color" class="input-color" />
+				</div>
+				<div class="cell">
+					<div class="input-color-output"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					Select Color
+					<select class="ddl-color-names"></select>
+				</div>
+				<div class="cell">
+					<div class="ddl-color-output"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<h1>How to use...</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<a href="ColorConverter.js">download ColorConverter.js</a>
+					<br />
+					<a href="ColorConverter.min.js">download ColorConverter.min.js</a>
+					<br />
+					<a>gitHub link - download sourcecode</a>
+					<br />
+					<a>npm install color-converter</a>
+				</div>
+			</div>
+			<div class="row">
+				<div>
+					<h2>import ColorConverter from "./ColorConverter.js";</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div>
+					<h2>
+						ColorConverter.toColor(
+						<i>strColorValue</i>
+						)
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div>
+					<h2>
+						<i>strColorValue</i>
+						.toColor()
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div><h3>returns object having following read-only properties</h3></div>
+			</div>
+			<div class="row">
+				<table style="width: auto">
+					<tbody>
+						<tr>
+							<th>Property</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td>.name</td>
+							<td>Name of color defined in css3</td>
+						</tr>
+						<tr>
+							<td>.rgb</td>
+							<td>String rgb color value</td>
+						</tr>
+						<tr>
+							<td>.rgba</td>
+							<td>String rgba color value</td>
+						</tr>
+						<tr>
+							<td>.hex</td>
+							<td>String Hexa code of color</td>
+						</tr>
+						<tr>
+							<td>.hexa</td>
+							<td>String Hexa code of color with alpha value</td>
+						</tr>
+						<tr>
+							<td>.hsl</td>
+							<td>String HSL color</td>
+						</tr>
+						<tr>
+							<td>.hsla</td>
+							<td>String HSL color with alpha value</td>
+						</tr>
+						<tr>
+							<td>.r</td>
+							<td>Numeric Red Value</td>
+						</tr>
+						<tr>
+							<td>.g</td>
+							<td>Numeric Green Value</td>
+						</tr>
+						<tr>
+							<td>.b</td>
+							<td>Numeric Blue Value</td>
+						</tr>
+						<tr>
+							<td>.a</td>
+							<td>Numeric Alpha Value Floating Point</td>
+						</tr>
+						<tr>
+							<td>.h</td>
+							<td>Numeric Hue Value</td>
+						</tr>
+						<tr>
+							<td>.s</td>
+							<td>Numeric Saturation Value</td>
+						</tr>
+						<tr>
+							<td>.l</td>
+							<td>Numeric Lightness Value</td>
+						</tr>
+						<tr>
+							<td>.str</td>
+							<td>String that is passed for conversion of color</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="row">
+				<div><h1>Examples...</h1></div>
+			</div>
+			<div class="row">
+				<div>
+					<ol>
+						<li>
+							<b>"red".toColor().rgba</b>
+							<i>Output:rgba(255, 0, 0, 1)</i>
+						</li>
+						<li>
+							<b>"#FFCCDD".toColor().rgba</b>
+							<i>Output:rgba(255, 204, 221, 1)</i>
+						</li>
+						<li>
+							<b>"rgb(255, 255, 0)".toColor().hsl</b>
+							<i>Output:hsl(60, 100%, 50%)</i>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row">
+				<div><h1>License : Free to use</h1></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="module" src="index.js"></script>
