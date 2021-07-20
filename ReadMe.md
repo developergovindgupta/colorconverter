@@ -8,9 +8,15 @@
 
 [gitHub link - download sourcecode](https://github.com/developergovindgupta/colorconverter)
 
-npm install color-converter
+[npm install string-color-converter](https://www.npmjs.com/package/string-color-converter)
+
+html - js
 
     import ColorConverter from "./ColorConverter.js";
+
+node:
+
+    const ColorConverter = require('string-color-converter');
     
 syntax : 
 
