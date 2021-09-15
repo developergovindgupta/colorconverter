@@ -1,6 +1,11 @@
-# ColorConverter.toColor()
+# ColorConverter.toColor("color")
+# String.toColor()
 
 ## How to use...
+
+### View Demo
+
+[view demo](https://8spk9.csb.app/)
 
 [download ColorConverter.js](https://raw.githubusercontent.com/developergovindgupta/colorconverter/main/ColorConverter.js)
 

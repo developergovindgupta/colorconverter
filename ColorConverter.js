@@ -587,7 +587,9 @@ const ColorConverter = {
 		return null;
 	},
 };
-String.prototype.toColor = function () {
-	return ColorConverter.toColor(this);
-};
+Object.defineProperty(String.prototype, 'toColor', {
+	value: function () {
+		return ColorConverter.toColor(this);
+	},
+});
 export default ColorConverter;
